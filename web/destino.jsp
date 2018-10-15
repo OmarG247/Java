@@ -13,11 +13,13 @@
     </head>
     <body>
         <!--5.-Mostramos los datos escritos por el usuario -->
-        <% String usuario=(String)request.getAttribute("usuariojsp");
-        int Numero1=Integer.parseInt((String)request.getAttribute("Numero1jsp"));
-        int Numero2=Integer.parseInt((String)request.getAttribute("Numero2jsp"));
-        int resultado=Numero1+Numero2;
+        <% 
+        String Numero1=(String)request.getAttribute("num1");
+        String Numero2=(String)request.getAttribute("num2");
+        Integer resultado=(Integer)request.getAttribute("resultadojsp");
+        //int resultado=Numero1+Numero2;
         %>
-        <h1><%= usuario %><%= resultado %></h1>
+        <h1><%=resultado %></h1><br>
+        <a href="index.html">Volver</a>
     </body>
 </html>
